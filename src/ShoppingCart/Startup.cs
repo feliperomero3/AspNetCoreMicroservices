@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ShoppingCart
@@ -8,18 +7,17 @@ namespace ShoppingCart
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllers();
             });
         }
     }
