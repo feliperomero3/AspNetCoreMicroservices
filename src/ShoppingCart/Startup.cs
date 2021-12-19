@@ -8,6 +8,7 @@ namespace ShoppingCart
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<ShoppingCartStore>();
         }
 
         public void Configure(IApplicationBuilder app)
