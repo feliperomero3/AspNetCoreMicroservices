@@ -17,8 +17,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore --verbosity normal src\ShoppingCart\ShoppingCart.csproj
     - name: Build
-      run: dotnet build --no-restore --configuration release --verbosity normal
+      run: dotnet build --no-restore --configuration release --verbosity normal src\ShoppingCart\ShoppingCart.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal src\ShoppingCart\ShoppingCart.csproj
