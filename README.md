@@ -1,10 +1,11 @@
 # ASP.NET Core Microservices
 
-Based on the Web Application built in the Book ['Microservices in .NET Second Edition'](https://www.manning.com/books/microservices-in-net-second-edition) by Christian Horsdal Gammelgaard (Manning, 2021).
+Based on the Web Application built in the Book ['Microservices in .NET Second Edition'][1] by Christian Horsdal Gammelgaard (Manning, 2021).
 
 Shopping Cart is a basic microservice.
 
 The shopping cart microservice supports three types of synchronous requests:
+
 - Getting a shopping cart
 - Adding an item to a shopping cart
 - Deleting an item from a shopping cart
@@ -25,3 +26,5 @@ The shopping cart microservice supports three types of synchronous requests:
 [MIT License](LICENSE)
 
 Copyright (c) 2021 Felipe Romero
+
+[1]: https://www.manning.com/books/microservices-in-net-second-edition
