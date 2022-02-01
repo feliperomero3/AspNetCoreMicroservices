@@ -19,7 +19,6 @@ The shopping cart microservice supports three types of synchronous requests:
 1. Clone the project.
 1. Open the solution file `ShoppingCart.sln` with Visual Studio 2019.
 1. Press F5 to start the application.
-1. Open your browser and go to <https://localhost:44338>
 
 ## License
 
