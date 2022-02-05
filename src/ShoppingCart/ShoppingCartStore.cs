@@ -8,7 +8,7 @@ namespace ShoppingCart
 
         public ShoppingCartStore()
         {
-            Seed();
+            //Seed();
         }
 
         public ShoppingCart Get(int userId) => Database.ContainsKey(userId) ? Database[userId] : new ShoppingCart(userId);

@@ -28,6 +28,8 @@ namespace ShoppingCart
             });
 
             services.AddScoped<ShoppingCartStore>();
+            services.AddScoped<ProductCatalogClient>();
+            services.AddHttpClient();
         }
 
         public void Configure(IApplicationBuilder app)
