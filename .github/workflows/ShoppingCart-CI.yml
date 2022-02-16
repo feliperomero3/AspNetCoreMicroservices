@@ -24,3 +24,8 @@ jobs:
       run: dotnet test --no-build --configuration release --verbosity normal .\src\ShoppingCart\ShoppingCart.csproj
     - name: Publish
       run: dotnet publish --no-build --configuration release --verbosity normal .\src\ShoppingCart\ShoppingCart.csproj
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: publish
+        path: .\src\ShoppingCart\bin\release\**\publish
