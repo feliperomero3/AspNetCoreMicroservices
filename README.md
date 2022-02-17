@@ -4,8 +4,6 @@
 
 Based on the Web Application built in the Book ['Microservices in .NET Second Edition'][1] by Christian Horsdal Gammelgaard (Manning, 2021).
 
-Shopping Cart is a basic microservice.
-
 The shopping cart microservice supports three types of synchronous requests:
 
 - Getting a shopping cart
