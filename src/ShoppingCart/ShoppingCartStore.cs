@@ -4,20 +4,20 @@ namespace ShoppingCart
 {
     public class ShoppingCartStore
     {
-        private static readonly Dictionary<int, ShoppingCart> Database = new();
+        private static readonly Dictionary<int, ShoppingCart> _database = new();
 
         public ShoppingCartStore()
         {
             //Seed();
         }
 
-        public ShoppingCart Get(int userId) => Database.ContainsKey(userId) ? Database[userId] : new ShoppingCart(userId);
+        public ShoppingCart Get(int userId) => _database.ContainsKey(userId) ? _database[userId] : new ShoppingCart(userId);
 
-        public void Save(ShoppingCart shoppingCart) => Database[shoppingCart.UserId] = shoppingCart;
+        public void Save(ShoppingCart shoppingCart) => _database[shoppingCart.UserId] = shoppingCart;
 
         public static void Seed()
         {
-            if (Database.Count > 0)
+            if (_database.Count > 0)
             {
                 return;
             }
@@ -29,7 +29,7 @@ namespace ShoppingCart
 
             cart.AddItems(new[] { item1, item2 });
 
-            Database.Add(42, cart);
+            _database.Add(42, cart);
         }
     }
 }

@@ -11,12 +11,12 @@ namespace ShoppingCart
     public class ProductCatalogClient
     {
         private readonly HttpClient _client;
-        private const string ProductCatalogueBaseUrl = "https://git.io/JeHiE";
-        private const string GetProductPathTemplate = "?productIds=[{0}]";
+        private const string _productCatalogueBaseUrl = "https://git.io/JeHiE";
+        private const string _getProductPathTemplate = "?productIds=[{0}]";
 
         public ProductCatalogClient(HttpClient client)
         {
-            client.BaseAddress = new Uri(ProductCatalogueBaseUrl);
+            client.BaseAddress = new Uri(_productCatalogueBaseUrl);
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             _client = client;
         }
@@ -29,7 +29,7 @@ namespace ShoppingCart
 
         private async Task<HttpResponseMessage> RequestProductFromProductCatalogue(int[] productCatalogueIds)
         {
-            var productsResource = string.Format(GetProductPathTemplate, string.Join(",", productCatalogueIds));
+            var productsResource = string.Format(_getProductPathTemplate, string.Join(",", productCatalogueIds));
             return await _client.GetAsync(productsResource);
         }
 
