@@ -35,6 +35,7 @@ namespace ShoppingCart
                 .AddTransientHttpErrorPolicy(policy =>
                     policy.WaitAndRetryAsync(3, attempt => TimeSpan.FromMilliseconds(100 * Math.Pow(2, attempt)))
                 );
+            services.AddScoped<EventStore>();
         }
 
         public void Configure(IApplicationBuilder app)
