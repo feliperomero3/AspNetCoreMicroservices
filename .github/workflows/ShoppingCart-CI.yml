@@ -8,14 +8,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
     - name: Clone
       uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 8.0.x
     - name: Restore
       run: dotnet restore --verbosity normal .\src\ShoppingCart\ShoppingCart.csproj
     - name: Build
@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: ShoppingCart
-        path: .\src\ShoppingCart\bin\Release\net5.0\publish
+        path: .\src\ShoppingCart\bin\Release\net8.0\publish
