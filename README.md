@@ -12,7 +12,7 @@ The shopping cart microservice supports three types of synchronous requests:
 
 ## Prerequisites
 
-- Visual Studio 2019
+- Visual Studio 2022
 
 ## Getting started
 
@@ -24,7 +24,7 @@ The shopping cart microservice supports three types of synchronous requests:
 
 [MIT License](LICENSE)
 
-Copyright (c) 2021 Felipe Romero
+Copyright (c) 2025 Felipe Romero
 
 [1]: https://www.manning.com/books/microservices-in-net-second-edition
 [branch]: https://github.com/feliperomero3/AspNetCoreMicroservices/actions/workflows/ShoppingCart-CI.yml
